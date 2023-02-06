@@ -17,7 +17,7 @@ public class LC155 {
     private int[] data;
     private int size;
     private ArrayList<Integer> minList;
-    private final static int DintFAULT_CAPACITY = 10;
+    private final static int DEFAULT_CAPACITY = 10;
 
     public LC155(int capacity){
         this.data = new int[capacity];
@@ -26,7 +26,7 @@ public class LC155 {
     }
 
     public LC155(){
-        this(DintFAULT_CAPACITY);
+        this(DEFAULT_CAPACITY);
     }
 
 
@@ -50,7 +50,7 @@ public class LC155 {
         int res = data[size - 1];
         data[size - 1] = 0;
         size -- ;
-        if(size - 1 < data.length / 4 && data.length / 2 > DintFAULT_CAPACITY){
+        if(size - 1 < data.length / 4 && data.length / 2 > DEFAULT_CAPACITY){
             resize(data.length / 2);
         }
         minList.remove(minList.size() - 1);

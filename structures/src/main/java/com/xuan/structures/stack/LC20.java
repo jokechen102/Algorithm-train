@@ -34,4 +34,5 @@ public class LC20 {
         System.out.println(lc20.isValid(s1));
         System.out.println(lc20.isValid(s2));
     }
+    // 15L@aagu
 }
